@@ -69,9 +69,9 @@ namespace ReadToPdfSendToMail
             listViewEmail.Items.Add(mail);
             try
             {
-                SmtpClient client = new SmtpClient("smtp-mail.outlook.com", 587);
+                SmtpClient client = new SmtpClient("your smtp adrees", "your integer port number");
                 MailMessage message = new MailMessage();
-                message.From = new MailAddress("mehmetyusuftutuncu@outlook.com");
+                message.From = new MailAddress("from mail adress");
                 message.To.Add(mail);
                 message.Body = "Your message body";
                 message.Subject = "Your message subject";
